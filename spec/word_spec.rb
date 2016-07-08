@@ -1,5 +1,6 @@
 require('rspec')
 require('word')
+require('definition')
 
 describe("Word") do
   before do
@@ -44,12 +45,21 @@ describe("Word") do
   end
 
   describe(".find") do
-  it("returns a word by its id number") do
-    test_word = Word.new({:word => "asymptote"})
-    test_word.save()
-    test_word2 = Word.new({:word => "asymptote"})
-    test_word2.save()
-    expect(Word.find(test_word.id())).to(eq(test_word))
+    it("should return a word by its id number") do
+      test_word = Word.new({:word => "asymptote"})
+      test_word.save()
+      test_word2 = Word.new({:word => "asymptote"})
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
   end
-end
+
+  describe("#add_definition") do
+    it("should add a definition to the definitions array") do
+      test_word = Word.new({:word => "asymptote"})
+      test_def = Definition.new({:definition => "a straight line approached by a given curve as one of the variables in the equation of the curve approaches infinity"})
+      test_word.add_definition(test_def)
+      expect(test_word.definitions()).to(eq([test_def]))
+    end
+  end
 end

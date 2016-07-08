@@ -1,7 +1,8 @@
 require('pry')
+# require('definition')
 
 class Word
-  attr_reader(:word, :id)
+  attr_reader(:word, :id, :definitions)
 
   @@words = []
 
@@ -13,6 +14,10 @@ class Word
 
   define_method(:save) do
     @@words.push(self)
+  end
+
+  define_method(:add_definition) do |definition|
+    @definitions.push(definition)
   end
 
   define_singleton_method(:all) do
@@ -32,4 +37,5 @@ class Word
     end
     found_word
   end
+
 end
