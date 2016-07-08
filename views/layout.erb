@@ -3,8 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Word Snob</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <%= yield %>
+    <div class="jumbotron">
+      <h1 class="text-center">Welcome to Word Snob</h1>
+      <p class="text-center">An online dictionary page that's more or less the opposite of urban dictionary.  Only pentasyllabic words or greater, please.  Bask in the logophilia!</p>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
