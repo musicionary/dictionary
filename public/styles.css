@@ -1,9 +1,14 @@
+body {
+  /*margin-top: 50px;*/
+}
+
 .jumbotron {
   background-image: url(library.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
+  margin-top: -25px;
 }
 
 .jumbotron h1 {

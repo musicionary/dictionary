@@ -1,8 +1,11 @@
-
-<ul>
-  <% @words.each() do |word|%>
-    <li><a href="/words/<%= word.id() %>"><%= word.word() %></a></li>
-  <% end %>
-</ul>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="list-group">
+        <% @words.each() do |word|%>
+          <a href="/words/<%= word.id() %>"><button type='button' class="list-group-item"><%= word.word() %></button></a>
+        <% end %>
+    </div>
+  </div>
+</div>
 
 <a href="/words/new"><button type="button" class="btn btn-primary">Add a Word</button></a>
