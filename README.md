@@ -30,7 +30,7 @@ Application is deployed to Heroku (include the link in your README)
 
 In your terminal, run 'ruby app.rb' to start the Sinatra local server and point your browser to localhost:4567
 
-* To visit the live version of the project, visit
+* To visit the live version of the project, visit https://blooming-ocean-43421.herokuapp.com/
 ## Contributing
 
 1. Fork it!
