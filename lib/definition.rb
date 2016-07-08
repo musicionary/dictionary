@@ -5,6 +5,5 @@ class Definition
 
   define_method(:initialize) do |attribute|
     @definition = attribute.fetch(:definition)
-    @id = nil
   end
 end

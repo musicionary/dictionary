@@ -17,6 +17,7 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
+    # definition.id = self.definitions.length() + 1
     @definitions.push(definition)
   end
 

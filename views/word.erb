@@ -1,4 +1,10 @@
 <h1><%= @word.word() %></h1>
 
-<a href="#"><button type="button">Add a Definition</button></a>
+<ul>
+  <% @word.definitions().each() do |definition| %>
+  <li><%= definition.definition() %></li>
+  <% end %>
+</ul>
+
+<a href="/words/<%= @word.id%>/definitions/new"><button type="button">Add a Definition</button></a>
 <a href="/"><button type="button">Home</button></a>
