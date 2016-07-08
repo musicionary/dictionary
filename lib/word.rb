@@ -2,12 +2,13 @@ require('pry')
 # require('definition')
 
 class Word
-  attr_reader(:word, :id, :definitions)
+  attr_reader(:word, :part_of_speech, :id, :definitions)
 
   @@words = []
 
-  define_method(:initialize) do |attributes|
-    @word = attributes.fetch(:word)
+  define_method(:initialize) do |attribute|
+    @word = attribute.fetch(:word)
+    @part_of_speech = attribute.fetch(:part_of_speech)
     @id = @@words.length().+(1)
     @definitions = []
   end

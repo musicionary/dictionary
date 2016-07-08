@@ -1,11 +1,14 @@
-<div class="row">
-  <div class="col-sm-6">
-    <div class="list-group">
-        <% @words.each() do |word|%>
-          <a href="/words/<%= word.id() %>"><button type='button' class="list-group-item"><%= word.word() %></button></a>
-        <% end %>
-    </div>
+<div class="row add-btn">
+  <div class="col-sm-2 col-sm-offset-5">
+    <a href="/words/new"><button type="button" class="btn btn-primary btn-lg">Add a Word</button></a>
   </div>
 </div>
 
-<a href="/words/new"><button type="button" class="btn btn-primary">Add a Word</button></a>
+<div class="row">
+  <% @words.each() do |word|%>
+    <div class="col-sm-4 thumbnail">
+      <p><%= word.word() %><a href="/words/<%= word.id() %>" class="btn btn-warning pull-right">View</a></p>
+
+    </div>
+  <% end %>
+</div>

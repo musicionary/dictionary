@@ -22,3 +22,12 @@ body {
   width: 750px;
   margin-left: 23%;
 }
+
+.thumbnail p {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.add-btn {
+  margin-bottom: 30px;
+}
