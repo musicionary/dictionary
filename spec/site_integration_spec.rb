@@ -41,7 +41,7 @@ describe('the word id path', {:type => :feature}) do
     click_link("Home")
     expect(page).to have_content("Welcome to Word Snob")
     click_link("View")
-    expect(page).to have_content("asymptote")
+    expect(page).to have_content("Asymptote")
   end
 end
 
@@ -58,7 +58,7 @@ describe('the new definition form path', {:type => :feature}) do
     click_link("Home")
     expect(page).to have_content("Welcome to Word Snob")
     click_link("View")
-    expect(page).to have_content("asymptote")
+    expect(page).to have_content("Asymptote")
     click_link("Add a Definition")
     expect(page).to have_content("Add a Definition")
     fill_in("definition", :with => "a straight line approached by a given curve as one of the variables in the equation of the curve approaches infinity")

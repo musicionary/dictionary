@@ -10,14 +10,14 @@ describe("Word") do
   describe("#word") do
     it("should return name of the word") do
       test_word = Word.new({:word => "asymptote", :part_of_speech => "noun"})
-      expect(test_word.word()).to(eq("asymptote"))
+      expect(test_word.word()).to(eq("Asymptote"))
     end
   end
 
   describe("#part_of_speech") do
     it("should return the part of speech of the word") do
       test_word = Word.new({:word => "asymptote", :part_of_speech => "noun"})
-      expect(test_word.part_of_speech()).to(eq("noun"))
+      expect(test_word.part_of_speech()).to(eq("Noun"))
     end
   end
 

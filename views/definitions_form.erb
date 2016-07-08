@@ -5,7 +5,7 @@
     <form action="/words/<%= @word.id() %>" method="post">
       <div class="form-group">
         <label for="definition">Enter a definition for this word:</label>
-        <input type="text" name="definition" id="definition" class="form-control">
+        <input type="text" name="definition" id="definition" class="form-control" required>
       </div>
 
       <button type="submit" id="submit" class="btn btn-primary">Add Definition</button>

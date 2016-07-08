@@ -7,8 +7,8 @@ class Word
   @@words = []
 
   define_method(:initialize) do |attribute|
-    @word = attribute.fetch(:word)
-    @part_of_speech = attribute.fetch(:part_of_speech)
+    @word = attribute.fetch(:word).capitalize
+    @part_of_speech = attribute.fetch(:part_of_speech).capitalize
     @id = @@words.length().+(1)
     @definitions = []
   end
